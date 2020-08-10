@@ -5,11 +5,17 @@
   This is a div!
 </div>
 
-<button (click)="addItem()">Add Item</button>
+<button (click)="addItem()">Add item</button>
 <ul>
   <li *ngIf="items.length === 0">The list is empty</li>
   <li *ngFor="let name of items; index as i">
     {{ name }} {{ i }}
-    <button (click)="deleteItem(items)">Delete</button>
+    <button (click)="deleteItem(i)">delete</button>
   </li>
 </ul>
+
+<div *ngFor="let product of products">
+  {{ product.title }}
+  <img [src]="product.image" alt="">
+  {{ product.price }}
+</div>
