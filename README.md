@@ -1,1 +1,1 @@
-# angular-playground
+# Angular Exercise
