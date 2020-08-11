@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Product } from '../product.model';
 
 @Component({
@@ -8,12 +8,6 @@ import { Product } from '../product.model';
 
 export class ProductComponent {
 
-  product: Product = {
-      id: '1',
-      image: 'assets/images/camiseta.png',
-      title: 'Camiseta',
-      price: 80000,
-      description: 'blu blu blu blu'
-  };
+  @Input() product: Product;
 
 }
